@@ -1,0 +1,7 @@
+requeriments
+you need docker
+
+if you have docker, you should use the next command:
+docker compose up
+
+so you can check in your browser the next addres localhost:http://localhost:4000/test

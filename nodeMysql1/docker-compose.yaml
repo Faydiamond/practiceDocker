@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  mysql3:
+    image: mysql
+    environment:
+      - MYSQL_USER=daniel
+      - MYSQL_PASSWORD=daniel
+      - MYSQL_DATABASE=testdb
+      - MYSQL_ROOT_PASSWORD=daniel
+      - MYSQL_ALLOW_EMPTY_PASSWORD=daniel
+      - MYSQL_RANDOM_ROOT_PASSWORDb=daniel
+    ports:
+      - 3307:3306
+  app:
+    build: .
+    depends_on:
+      - mysql3
+    
+    links:
+      - mysql3
+    ports:
+      - 4000:4000    
